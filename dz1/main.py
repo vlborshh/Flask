@@ -13,15 +13,21 @@ def index():
 
 @app.route('/jeans/')
 def jeans():
-    return render_template('jeans.html')
+    price = 1300
+    context = {'price': price}
+    return render_template('jeans.html', **context)
 
 @app.route('/jacket/')
 def jacket():
-    return render_template('jacket.html')
+    price = 3000
+    context = {'price': price}
+    return render_template('jacket.html', **context)
 
 @app.route('/shoes/')
 def shoes():
-    return render_template('shoes.html')
+    price = 4100
+    context = {'price': price}
+    return render_template('shoes.html', **context)
 
 
 if __name__ == '__main__':
