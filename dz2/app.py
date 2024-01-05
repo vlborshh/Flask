@@ -132,12 +132,12 @@ def login_form():
     if request.method == 'POST':
         session['login'] = request.form.get('login')
         session['email'] = request.form.get('email')
-        if session['login'] != '' and session['email'] != '':
-            response = make_response(redirect(url_for('login_success')))
-            response.set_cookie('login', session['login'])
-            response.set_cookie('email', session['email'])
-            return response
-        return redirect(url_for('login_success'))
+
+        response = make_response(redirect(url_for('login_success')))
+        response.set_cookie('login', session['login'])
+        response.set_cookie('email', session['email'])
+        return response
+
     context = {
         'login': 'Авторизация'
     }
