@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block title %}Приветствие пользователя{% endblock title %}
+
+{% block content %}
+<h1>Приветствие пользователя</h1>
+<p>
+    Привет {{ name }}
+</p>
+
+<form method="post">
+    <input type="submit" value="На главную">
+</form>
+{% endblock content %}
